@@ -1,0 +1,57 @@
+name: Expressive Profile
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - profile.json
+      - banner.png
+      - .profile/icons.json
+      - .github/expressive-profile/**
+      - .github/workflows/expressive-expressive-profile.yml
+
+permissions:
+  contents: write
+
+env:
+  # metawka/expressive-profile (MIT), pinned
+  EP_REF: 0dacdd6b4cd8d649b71ace733afbfe1b92649955
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build patched renderer
+        run: |
+          git clone --quiet https://github.com/metawka/expressive-profile.git "$RUNNER_TEMP/ep"
+          cd "$RUNNER_TEMP/ep"
+          git checkout --quiet "$EP_REF"
+          git apply "$GITHUB_WORKSPACE/.github/expressive-profile/hero.patch"
+          npm ci --silent
+          npm run assets --silent
+          npm run renderer --silent
+
+      - name: Render profile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node "$RUNNER_TEMP/ep/action/render.mjs"
+
+      - name: Post-process README
+        run: .github/expressive-profile/postprocess.sh
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets README.md .profile
+          git diff --cached --quiet || (git commit -m "Updated profile" && git push)
+          
