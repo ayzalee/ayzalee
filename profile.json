@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "login": "A Y A Z",
+  "login": "ayazaliofc",
   "seed": "#7C3AED",
   "seedFromAvatar": false,
   "scheme": "vibrant",
@@ -21,8 +21,8 @@
   ],
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Ayaz",
-    "subtitle": "open-source developer",
+    "name": "A Y A Z",
+    "subtitle": "Developer & digital creator",
     "typing": false,
     "avatarShape": "cookie12",
     "chips": [
@@ -31,8 +31,8 @@
         "label": "Pakistan"
       },
       {
-        "icon": "brand:osi",
-        "label": "FOSS"
+        "icon": "alternate_email",
+        "label": "@ayazaliofc"
       }
     ]
   },
@@ -72,15 +72,15 @@
     "items": [
       {
         "icon": "brand:telegram",
-        "url": "https://t.me/ayzalee"
+        "url": "https://t.me/ayazaliofc"
       },
       {
         "icon": "brand:youtube",
-        "url": "https://www.youtube.com/@ilyamiro21"
+        "url": "https://www.youtube.com/@ayazaliofc"
       },
       {
         "icon": "brand:reddit",
-        "url": "https://www.reddit.com/user/ayazalee"
+        "url": "https://www.reddit.com/user/ayazaliofc"
       },
       {
         "icon": "brand:discordtag",
@@ -88,7 +88,7 @@
       },
       {
         "icon": "brand:mailtag",
-        "url": "mailto:ayazaliofc@gmail.com"
+        "url": ""
       }
     ],
     "variant": "chip",
