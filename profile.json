@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "login": "ilyamiro",
+  "login": "A Y A Z",
   "seed": "#7C3AED",
   "seedFromAvatar": false,
   "scheme": "vibrant",
@@ -21,14 +21,14 @@
   ],
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Ilyamiro",
+    "name": "Ayaz",
     "subtitle": "open-source developer",
     "typing": false,
     "avatarShape": "cookie12",
     "chips": [
       {
         "icon": "location_on",
-        "label": "Denmark"
+        "label": "Pakistan"
       },
       {
         "icon": "brand:osi",
@@ -72,7 +72,7 @@
     "items": [
       {
         "icon": "brand:telegram",
-        "url": "https://t.me/sacrificeit"
+        "url": "https://t.me/ayzalee"
       },
       {
         "icon": "brand:youtube",
@@ -80,7 +80,7 @@
       },
       {
         "icon": "brand:reddit",
-        "url": "https://www.reddit.com/user/ilyamiro1"
+        "url": "https://www.reddit.com/user/ayazalee"
       },
       {
         "icon": "brand:discordtag",
@@ -88,7 +88,7 @@
       },
       {
         "icon": "brand:mailtag",
-        "url": "mailto:ilyamiro.work@gmail.com"
+        "url": "mailto:ayazaliofc@gmail.com"
       }
     ],
     "variant": "chip",
